@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="sentence">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h1>
+
+    <script>
+        var sentenceNode = document.getElementById("sentence")
+        var sentence = sentenceNode.innerText
+
+        var upperSentence = sentence.toUpperCase()
+        var lowerSentence = sentence.toLowerCase()
+        var firstThreeChars = sentence.substr(3, 3)
+
+        var allWords = sentence.split(" ")
+        var bracketWords = "(" + allWords.join(")(") + ")"
+
+        var firstOneWord = allWords.slice(0, 1)
+
+        var middleWords = allWords.slice(5, 10)
+        var makeSentence = middleWords.join(" ")
+
+        sentenceNode.innerText = makeSentence
+        //console.log(allWords)
+    </script>
+</body>
+</html>

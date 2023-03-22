@@ -21,3 +21,4 @@ document.querySelector("#button1").onclick = function(){
     //p[0].innerText = "Whoaaa!";
     p.forEach(element => element.innerText = "Yippee!");
 }
+
