@@ -7,17 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Your input was:</h1>
-    <h3 id="customInput"></h3> 
-
+    <p id="teksti"></p>
 
     <script>
-        let person = prompt("Please enter your name", "");
+        let numero = " 13";
+        let tanaa = " tänään"
+        let result = numero.concat(tanaa, " Wow");
 
-        if (person != null) {
-        document.getElementById("customInput").innerHTML =
-        "Hello " + person + "! How are you today?";
-        }
+        document.getElementById("teksti").innerHTML = result;
     </script>
 </body>
 </html>
