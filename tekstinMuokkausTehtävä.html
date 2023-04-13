@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <input id="input">
+        <button onclick="button()">Change</button>
+    </div>
+    <p id="text"></p>
+
+
+    <script>
+          
+        function button() {
+            let output = document.getElementById("text");
+            let inputText = document.getElementById("input").innerHTML;
+            var splitText = inputText.split(" ");
+
+
+            function shuffle(splitText) {
+                let currentIndex = splitText.length,  randomIndex;
+
+                // While there remain elements to shuffle.
+                while (currentIndex != 0) {
+
+                    // Pick a remaining element.
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // And swap it with the current element.
+                    [splitText[currentIndex], splitText[randomIndex]] = [
+                    splitText[randomIndex], splitText[currentIndex]];
+                }
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>
