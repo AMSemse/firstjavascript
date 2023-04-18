@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this is a global variable
+        var course = "js4mokokos";
+        //this is a global function
+        (function doAthing() {
+            //this is a local variable
+            //this is only accessible in its local ecosystem
+            var teacher = "Kalob Taulien"
+            //two console logs
+            console.log("!!!", teacher)
+            console.log("!!!", course)
+        })();
+        //Exec. the function
+        doAthing(course)
+        //console.log
+        console.log("OUT OF SCOPE", teacher)
+    </script>
+</body>
+</html>
