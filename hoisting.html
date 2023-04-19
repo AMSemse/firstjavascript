@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        (function getPerson() {
+            if(myName === undefined) {
+                myName = "Aleksi"
+            }
+
+            console.log("Var not set yet", myName)
+            //var myName = "Aleksi"
+            console.log("Var is set", myName)
+
+            var myName
+        })();
+
+        console.log("name is", myName)
+
+        
+
+        function getPersonTwo(personTwo) {
+            if (personTwo === undefined) {
+                personTwo = "Arttu"
+            }
+            console.log("A thing", personTwo)
+            var personTwo = "Whatever"
+        }
+
+        
+
+
+        var computer;
+        console.log(typeof(computer))
+        if (computer == undefined) {
+            alert("it's undefined");
+        };
+    </script>
+</body>
+</html>
