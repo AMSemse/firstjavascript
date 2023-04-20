@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Changing CSS with event listeners</h1>
+    <div>
+        <label>Backgroud color</label>
+        <input type="text" class="js-bg-color" style="padding: 30px; font-size: 30px;">
+    </div>
+    <div>  
+        <label>Text color</label>
+        <input type="text" class="js-text-color" style="padding: 30px; font-size: 30px;">
+    </div>
+
+
+    <script>
+        // tehdään js-bg-color:sta muuttuja
+        var bgColor = document.querySelector(".js-bg-color")
+
+        // muutetaan yllä nimetyn muuttujan tyyliä
+        bgColor.style.border = "4px solid black"
+        bgColor.style.borderRadius = "10em"
+
+        // tehdään js-text-color:sta muuttuja
+        var textColor = document.querySelector(".js-text-color")
+
+        //tehdään html body elementistä muuttuja
+        var body = document.querySelector("body")
+
+        //muutetaan yllä nimetyn muuttujan tyyliä
+        body.style.backgroundColor = "red";
+        body.style.color = "white";
+
+        //bgColor muuttujaan lisätään eventti kuuntelija 'keyup' joka juoksee function kun tämä tapahtuu
+        bgColor.addEventListener('keyup', function(event){
+            //console.log("bg color", event.target.value)
+            var color = event.target.value  // color = asia mitä kirjoitat inputtiin
+            switch(color) {         
+                case 'red':
+                case 'white':
+                case 'blue':
+                    body.style.backgroundColor = color   // jos color on red,white tai blue niin muutetaan backgroundcolor täksi
+                    break
+                default:
+                    body.style.backgroundColor = 'tan'   // defaulttaa taniin jos color ei ole red,white tai blue
+                    break
+            } 
+        });
+        //textColor muuttujaan lisätään eventti kuuntelija 'keyup' joka juoksee function kun tämä tapahtuu
+        textColor.addEventListener('keyup', function(event){
+            body.style.color = event.target.value
+            //console.log("text color", event.target.value)
+        });
+    </script>
+</body>
+</html>
