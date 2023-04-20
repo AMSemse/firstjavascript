@@ -21,8 +21,11 @@
             let output = document.getElementById("text");
             let inputText = document.getElementById("input").value;
             var splitText = inputText.split(" ");
+            
             shuffle(splitText)
             console.log(splitText)
+
+            document.querySelector("#text").innerText = splitText;
             
         }
         function shuffle(splitText) {
