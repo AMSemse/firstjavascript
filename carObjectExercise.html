@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="carOneText"></p>
+    <p class="carTwoText"></p>
+    <p class="carThreeText"></p>
+
+    <button id="carsBtn">Make</button>
+
+    <script>
+        function car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        var car1 = new car('Honda', 'Civic', 2006)
+        var car2 = new car('Toyota', 'Corona', 1969)
+        var car3 = new car('Nissan', 'Altima', 2015)
+
+        var carsBtn = document.querySelector("#carsBtn");
+
+        car1['method'] = function() {
+            alert("No idea what kind of method should I add")
+        }
+
+        carsBtn.addEventListener("click", function(event) {
+            document.querySelector(".carOneText").innerHTML = car1.make + " " + car1.model + " " + car1.year;
+            document.querySelector(".carTwoText").innerHTML = car2.make + " " + car2.model + " " + car2.year;
+            document.querySelector(".carThreeText").innerHTML = car3.make + " " + car3.model + " " + car3.year;
+            car1.method()
+        });
+
+
+    </script>
+</body>
+</html>
